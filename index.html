@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/style.css" rel="stylesheet">
+    <link href="/styles/media.css" rel="stylesheet">
+    <title>Mais Pra TI</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <img src="./components/images/maisprati_logo2.jpeg" alt="Logo Pequena" class="logo">
+            <h1>+praTI</h1>
+        </div>
+        <ul>
+            <li><a href="https://www.maisprati.com.br/" target="_blank">Página inicial</a></li>
+            <li><a href="https://www.maisprati.com.br/comunidade" target="_blank">Comunidade</a></li>
+            <li><a href="https://www.maisprati.com.br/institucional" target="_blank">Institucional</a></li>
+            <li><a href="https://www.maisprati.com.br/faq" target="_blank">Dúvidas (FAQ)</a></li>
+            <li><a href="https://www.maisprati.com.br/blog" target="_blank">Blog</a></li>
+            <li><a href="https://maisprati.trindtech.com.br/plataforma/home" target="_blank" id="inscreva-se-btn">Entrar na plataforma</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <aside>
+            <h2><span>Inscreva - se agora</span></h2>
+            <h2>na melhor</h2>
+            <p>
+                Somos a +praTI, uma iniciativa da sociedade, sem fins lucrativos, que busca encontrar e capacitar novos talentos da área de TI. Queremos criar novas oportunidades na economia e transformar o modo como a tecnologia é vista pelas pessoas.
+                O nosso propósito é o que nos diferencia. Construímos um movimento voluntário, feito por pessoas e instituições que acreditam nos novos talentos da nossa sociedade e que buscam desenvolver a economia a partir do ensino da tecnologia. Você também acredita nisso?
+            </p>
+            <form id="newsletterForm">
+                <input type="text" name="name" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="tel" name="phone" placeholder="Telefone" required pattern="[0-9]{10,11}">
+                <input type="submit" value="Enviar">
+            </form>
+        </aside>
+        
+        <article>
+            <img src="./components/images/maisprati1.png" alt="mulher-roxa">
+        </article>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Esta  é  uma página  fictícia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#newsletterForm").validate({
+                rules: {
+                    name: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    phone: {
+                        required: true,
+                        digits: true,
+                        minlength: 10,
+                        maxlength: 11
+                    }
+                },
+                messages: {
+                    name: "Por favor, insira seu nome",
+                    email: "Por favor, insira um e-mail válido",
+                    phone: {
+                        required: "Por favor, insira seu telefone",
+                        digits: "Por favor, insira apenas dígitos",
+                        minlength: "O telefone deve ter pelo menos 10 dígitos",
+                        maxlength: "O telefone deve ter no máximo 11 dígitos"
+                    }
+                },
+                submitHandler: function(form) {
+                    alert("Formulário enviado com sucesso!");
+                    form.submit();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
