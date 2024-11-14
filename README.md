@@ -33,7 +33,7 @@ Este projeto é um site informativo que inclui links para diferentes seções, p
 - `style.css`: O arquivo CSS que contém os estilos do site.
 -  `media.css`; O arquivo CSS referente a responsividade
 
-## Página da aplicão: https://l-page-fake.vercel.app/  
+## Página da aplicação: https://l-page-fake.vercel.app/  
 
 ## Como Executar o Projeto
 
