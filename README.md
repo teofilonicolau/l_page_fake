@@ -31,7 +31,9 @@ Este projeto é um site informativo que inclui links para diferentes seções, p
 
 - `index.html`: O arquivo principal que contém a estrutura do site.
 - `style.css`: O arquivo CSS que contém os estilos do site.
--  `media.css`; O arquivo CSS referente a responsividade 
+-  `media.css`; O arquivo CSS referente a responsividade
+
+## Página da aplicão: https://l-page-fake.vercel.app/  
 
 ## Como Executar o Projeto
 
